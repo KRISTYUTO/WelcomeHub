@@ -1,0 +1,178 @@
+/* General Body */
+body {
+    background: #000; /* black background */
+    color: #fff; /* white text */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sections */
+section {
+    display: none;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+section.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Headings */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #ff7f00; /* orange headings */
+}
+
+/* Buttons */
+button {
+    background: #ff7f00; /* orange buttons */
+    color: #000; /* black text inside button */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #ffa500; /* brighter orange on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section img {
+    max-width: 200px; /* limits logo size */
+    height: auto;      /* maintains aspect ratio */
+    display: block;
+    margin: 0 auto 20px; /* center and spacing */
+    border-radius: 50%;   /* makes the logo circular */
+    object-fit: cover;    /* ensures it fills the circle nicely */
+}
+
+/* Checklist */
+.checklist li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Module Cards */
+.module-card {
+    background: #111; /* dark card background */
+    border: 1px solid #ff7f00; /* orange border */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: #222; /* darker track */
+    border-radius: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #ff7f00; /* orange fill */
+    width: 0%;
+    transition: width 0.4s;
+}
+
+/* Quiz */
+.quiz-item {
+    margin-bottom: 15px;
+    background: #111; /* dark card background */
+    border: 1px solid #ff7f00;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Org Chart */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.org-member {
+    background: #111; /* dark card */
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #ff7f00;
+}
+
+.org-member:hover {
+    background: #ff7f00; /* hover orange */
+    color: #000;
+}
+
+/* Badges */
+.badge-container {
+    margin-top: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ff7f00; /* orange */
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Certificate */
+.certificate {
+    background: #111; /* dark */
+    border: 2px solid #ff7f00; /* orange border */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Team Messages */
+.team-message {
+    background: #111;
+    border: 1px solid #ff7f00;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* Quiz Result */
+.quiz-result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff7f00;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

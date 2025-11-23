@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WelcomeHub – BrightNest Solutions</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 1. Welcome Screen -->
+<section id="welcome-screen" class="active hero-section">
+  <div class="hero-content">
+    <img src="logo.jpg" alt="BrightNest Logo">
+    <h1>Welcome to WelcomeHub – BrightNest Solutions!</h1>
+    <p>Welcome to the team, <strong>Khristian</strong>! Let’s begin your onboarding journey.</p>
+    <button onclick="showSection('checklist')">Start Onboarding</button>
+  </div>
+</section>
+
+<!-- 2. Onboarding Checklist -->
+<section id="checklist" class="section">
+  <h2>Onboarding Checklist</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <ul class="checklist">
+    <li><input type="checkbox" onclick="updateProgress()"> Fill Out Personal Information Form</li>
+    <li><input type="checkbox" onclick="updateProgress()"> Submit Required Documents</li>
+    <li><input type="checkbox" onclick="updateProgress()"> Complete Company Orientation Module</li>
+    <li><input type="checkbox" onclick="updateProgress()"> Read Employee Handbook</li>
+    <li><input type="checkbox" onclick="updateProgress()"> Meet Your Team</li>
+    <li><input type="checkbox" onclick="updateProgress()"> Take Policy & Culture Quiz</li>
+  </ul>
+  <button onclick="showSection('learning')">Go to Learning Modules</button>
+</section>
+
+<!-- 3. Learning Modules -->
+<section id="learning" class="section">
+  <h2>Policy & Company Culture</h2>
+  <div class="module-card">
+    <h3>Company Rules & Regulations</h3>
+    <ul>
+      <li>Punctuality Policy</li>
+      <li>Proper Work Conduct</li>
+      <li>Use of Office Equipment</li>
+      <li>Data Privacy & Confidentiality</li>
+    </ul>
+  </div>
+  <div class="module-card">
+    <h3>HR Policies</h3>
+    <ul>
+      <li>Attendance & Tardiness</li>
+      <li>Leave Application Process</li>
+      <li>Overtime Rules</li>
+      <li>Employee Benefits</li>
+      <li>Code of Discipline</li>
+    </ul>
+  </div>
+  <div class="module-card">
+    <h3>Mission, Vision & Values</h3>
+    <ul>
+      <li><strong>Mission:</strong> To empower businesses through efficient digital solutions and high-performing teams.</li>
+      <li><strong>Vision:</strong> To become the Philippines’ leading provider of modern office support systems.</li>
+      <li><strong>Core Values:</strong> Integrity, Teamwork, Innovation, Accountability, Respect</li>
+    </ul>
+  </div>
+  <button onclick="showSection('quiz')">Take Mini Quiz</button>
+</section>
+
+<!-- 4. Quiz Section -->
+<section id="quiz" class="section">
+  <h2>Policy Quiz</h2>
+  <form id="quiz-form" class="quiz">
+    <div class="quiz-item">
+      <p>1. Ano ang consequence ng repeated tardiness?</p>
+      <input type="radio" name="q1" value="B"> Written warning<br>
+      <input type="radio" name="q1" value="A"> Extra break time<br>
+      <input type="radio" name="q1" value="C"> Promotion<br>
+      <input type="radio" name="q1" value="D"> No consequence
+    </div>
+    <div class="quiz-item">
+      <p>2. Ilang araw bago mag-file ng leave?</p>
+      <input type="radio" name="q2" value="C"> At least 3 days before<br>
+      <input type="radio" name="q2" value="A"> Same day<br>
+      <input type="radio" name="q2" value="B"> 1–2 days<br>
+      <input type="radio" name="q2" value="D"> Anytime
+    </div>
+    <div class="quiz-item">
+      <p>3. Ano ang dapat gawin kung may emergency absence?</p>
+      <input type="radio" name="q3" value="B"> Inform HR or team leader ASAP<br>
+      <input type="radio" name="q3" value="A"> Don’t inform anyone<br>
+      <input type="radio" name="q3" value="C"> Ignore the absence<br>
+      <input type="radio" name="q3" value="D"> Wait until next day
+    </div>
+    <div class="quiz-item">
+      <p>4. Sino ang dapat lapitan for HR concerns?</p>
+      <input type="radio" name="q4" value="C"> HR Manager<br>
+      <input type="radio" name="q4" value="B"> Team Leader<br>
+      <input type="radio" name="q4" value="A"> Random co-worker<br>
+      <input type="radio" name="q4" value="D"> Janitor
+    </div>
+    <div class="quiz-item">
+      <p>5. Ano ang core value ng BrightNest?</p>
+      <input type="radio" name="q5" value="B"> Innovation<br>
+      <input type="radio" name="q5" value="A"> Laziness<br>
+      <input type="radio" name="q5" value="C"> Conflict<br>
+      <input type="radio" name="q5" value="D"> None
+    </div>
+    <button type="button" onclick="checkQuiz()">Finish Quiz</button>
+  </form>
+  <p id="quiz-result" class="quiz-result"></p>
+</section>
+
+<!-- Other sections remain unchanged -->
+<script src="script.js"></script>
+</body>
+</html>
