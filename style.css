@@ -1,3 +1,6 @@
+/* ===========================
+   GLOBAL LAYOUT
+=========================== */
 body {
   background: #000;
   color: #fff;
@@ -5,15 +8,15 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow-x: hidden; /* Prevent horizontal scroll issues */
+  overflow-x: hidden;
 }
 
 .section {
   display: none;
-  padding: 40px 20px;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
   animation: fadeIn 0.4s ease;
 }
@@ -28,7 +31,7 @@ body {
 }
 
 /* ===========================
-   HEADERS
+   HEADINGS & TEXT
 =========================== */
 h1, h2, h3, h4 {
   color: #ff7f00;
@@ -37,8 +40,8 @@ h1, h2, h3, h4 {
 
 .section-subtitle {
   color: #ccc;
-  margin-bottom: 20px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 /* ===========================
@@ -53,8 +56,7 @@ button {
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
-  transition: 0.2s;
-  width: auto;
+  transition: all 0.2s ease;
   max-width: 100%;
 }
 
@@ -79,16 +81,12 @@ button:hover {
 =========================== */
 .hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  flex-direction: column;
   padding: 20px;
   text-align: center;
-}
-
-.hero-content {
-  width: 100%;
 }
 
 .hero-logo {
@@ -102,7 +100,7 @@ button:hover {
 }
 
 /* ===========================
-   CHECKLIST
+   CHECKLIST & PROGRESS
 =========================== */
 .progress-container {
   background: #222;
@@ -129,15 +127,15 @@ button:hover {
 .checklist {
   list-style: none;
   padding: 0;
-  text-align: left;
   margin: 20px auto;
   max-width: 500px;
+  text-align: left;
 }
 
 .checklist li {
-  margin-bottom: 12px;
   font-size: 16px;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 /* ===========================
@@ -201,9 +199,8 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 15px;
   flex-wrap: wrap;
-  width: 100%;
+  margin-bottom: 15px;
 }
 
 .org-member {
@@ -213,8 +210,8 @@ button:hover {
   border: 1px solid #ff7f00;
   color: #ff7f00;
   font-size: 14px;
-  flex: 1 1 auto;
   text-align: center;
+  flex: 1 1 auto;
 }
 
 /* ===========================
@@ -222,11 +219,10 @@ button:hover {
 =========================== */
 .staff-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 18px;
-  flex-wrap: wrap;
   margin: 20px auto;
-  width: 100%;
 }
 
 .staff-card {
@@ -236,7 +232,7 @@ button:hover {
   padding: 20px;
   border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s ease;
   box-shadow: 0 0 15px rgba(255, 127, 0, 0.1);
 }
 
@@ -252,22 +248,19 @@ button:hover {
   height: 60px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-weight: 700;
   margin: 0 auto 12px;
 }
 
-/* ===========================
-   STAFF DETAILS
-=========================== */
+/* STAFF DETAIL */
 #staff-detail {
   background: #111;
   padding: 20px;
   border-radius: 12px;
   margin: 20px auto;
   max-width: 600px;
-  width: 100%;
 }
 
 /* ===========================
@@ -275,9 +268,9 @@ button:hover {
 =========================== */
 .badge-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
   margin: 20px 0;
 }
 
@@ -299,8 +292,8 @@ button:hover {
 .progress-circle {
   width: 150px;
   height: 150px;
-  border: 8px solid #222;
   border-radius: 50%;
+  border: 8px solid #222;
   position: relative;
 }
 
@@ -321,82 +314,38 @@ button:hover {
    FINAL SCREEN
 =========================== */
 .certificate {
-  margin-top: 20px;
   background: #111;
   padding: 20px;
   border-radius: 12px;
+  margin-top: 20px;
 }
 
 /* ===========================
-   RESPONSIVE FIXES
+   RESPONSIVE
 =========================== */
-
-/* Tablets + Small Phones */
 @media (max-width: 768px) {
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
 
-  .module-card,
-  .quiz,
-  #staff-detail {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .staff-card {
-    width: 45%;
-    max-width: none;
-  }
-
-  .hero-logo {
-    width: 120px;
-    height: 120px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .progress-container {
-    width: 90%;
-  }
-
-  .section {
-    padding: 30px 15px;
-  }
+  .module-card, .quiz, #staff-detail { width: 100%; padding: 15px; }
+  .staff-card { width: 45%; }
+  .hero-logo { width: 120px; height: 120px; }
+  button { width: 100%; }
+  .progress-container { width: 90%; }
+  .section { padding: 30px 15px; }
 }
 
-/* Very small phones (Android 4.7", iPhone SE, etc.) */
 @media (max-width: 480px) {
   h1 { font-size: 22px; }
   h2 { font-size: 18px; }
-
-  .staff-card {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .hero-logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .org-member {
-    width: 100%;
-  }
+  .staff-card { width: 100%; max-width: 260px; }
+  .hero-logo { width: 100px; height: 100px; }
+  .org-member { width: 100%; }
 }
 
-/* Extra small phones (Galaxy A03, old Androids) */
 @media (max-width: 360px) {
   h1 { font-size: 20px; }
   h2 { font-size: 17px; }
-
-  .hero-section {
-    padding: 10px;
-  }
-
-  .module-card,
-  .quiz-item {
-    padding: 14px;
-  }
+  .hero-section { padding: 10px; }
+  .module-card, .quiz-item { padding: 14px; }
 }
