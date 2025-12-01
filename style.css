@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
 
 .section {
@@ -54,6 +55,7 @@ button {
   margin-top: 20px;
   transition: 0.2s;
   width: auto;
+  max-width: 100%;
 }
 
 button:hover {
@@ -82,10 +84,11 @@ button:hover {
   min-height: 100vh;
   flex-direction: column;
   padding: 20px;
+  text-align: center;
 }
 
 .hero-content {
-  text-align: center;
+  width: 100%;
 }
 
 .hero-logo {
@@ -106,6 +109,7 @@ button:hover {
   border-radius: 20px;
   height: 20px;
   width: 80%;
+  max-width: 450px;
   margin: 0 auto 10px;
 }
 
@@ -133,6 +137,7 @@ button:hover {
 .checklist li {
   margin-bottom: 12px;
   font-size: 16px;
+  line-height: 1.4;
 }
 
 /* ===========================
@@ -144,6 +149,7 @@ button:hover {
   border-radius: 12px;
   margin: 20px auto;
   max-width: 700px;
+  width: 100%;
   text-align: left;
   box-shadow: 0 0 15px rgba(255, 127, 0, 0.1);
 }
@@ -163,6 +169,7 @@ button:hover {
 =========================== */
 .quiz {
   max-width: 700px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -196,6 +203,7 @@ button:hover {
   gap: 12px;
   margin-bottom: 15px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .org-member {
@@ -205,6 +213,8 @@ button:hover {
   border: 1px solid #ff7f00;
   color: #ff7f00;
   font-size: 14px;
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 /* ===========================
@@ -216,11 +226,13 @@ button:hover {
   gap: 18px;
   flex-wrap: wrap;
   margin: 20px auto;
+  width: 100%;
 }
 
 .staff-card {
   background: #111;
   width: 180px;
+  max-width: 45%;
   padding: 20px;
   border-radius: 12px;
   cursor: pointer;
@@ -255,6 +267,7 @@ button:hover {
   border-radius: 12px;
   margin: 20px auto;
   max-width: 600px;
+  width: 100%;
 }
 
 /* ===========================
@@ -317,6 +330,8 @@ button:hover {
 /* ===========================
    RESPONSIVE FIXES
 =========================== */
+
+/* Tablets + Small Phones */
 @media (max-width: 768px) {
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
@@ -329,7 +344,8 @@ button:hover {
   }
 
   .staff-card {
-    width: 150px;
+    width: 45%;
+    max-width: none;
   }
 
   .hero-logo {
@@ -350,17 +366,37 @@ button:hover {
   }
 }
 
+/* Very small phones (Android 4.7", iPhone SE, etc.) */
 @media (max-width: 480px) {
   h1 { font-size: 22px; }
   h2 { font-size: 18px; }
 
   .staff-card {
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
   }
 
   .hero-logo {
     width: 100px;
     height: 100px;
+  }
+
+  .org-member {
+    width: 100%;
+  }
+}
+
+/* Extra small phones (Galaxy A03, old Androids) */
+@media (max-width: 360px) {
+  h1 { font-size: 20px; }
+  h2 { font-size: 17px; }
+
+  .hero-section {
+    padding: 10px;
+  }
+
+  .module-card,
+  .quiz-item {
+    padding: 14px;
   }
 }
