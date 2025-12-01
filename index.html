@@ -9,322 +9,142 @@
 </head>
 <body>
 
-  <!-- 1. Welcome Screen -->
-  <section id="welcome-screen" class="section active hero-section">
-    <div class="hero-content">
-      <img src="logo.jpg" alt="BrightNest Logo" class="hero-logo">
-      <h1>Welcome to WelcomeHub – BrightNest Solutions!</h1>
-      <p>Welcome to the team, <strong>Carla</strong>! Let’s begin your onboarding journey.</p>
-      <button onclick="showSection('checklist')">Start Onboarding</button>
-    </div>
-  </section>
+  <main>
+    <!-- 1. Welcome Screen -->
+    <section id="welcome-screen" class="section active hero-section">
+      <div class="hero-content">
+        <img src="logo.jpg" alt="BrightNest Logo" class="hero-logo">
+        <h1>Welcome to WelcomeHub – BrightNest Solutions!</h1>
+        <p>Welcome to the team, <strong>Carla</strong>! Let’s begin your onboarding journey.</p>
+        <button onclick="showSection('checklist')">Start Onboarding</button>
+      </div>
+    </section>
 
-  <!-- 2. Digital Onboarding Checklist Page -->
-  <section id="checklist" class="section">
-    <h2>Onboarding Checklist</h2>
-    <p class="section-subtitle">Track your progress as you complete each step.</p>
+    <!-- 2. Onboarding Checklist -->
+    <section id="checklist" class="section">
+      <h2>Onboarding Checklist</h2>
+      <p class="section-subtitle">Track your progress as you complete each step.</p>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="progress-bar"></div>
-    </div>
-    <p class="progress-label" id="progress-label">Progress: 0%</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p class="progress-label" id="progress-label">Progress: 0%</p>
 
-    <ul class="checklist">
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Fill Out Personal Information Form</label></li>
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Submit Required Documents</label></li>
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Complete Company Orientation Module</label></li>
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Read Employee Handbook</label></li>
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Meet Your Team</label></li>
-      <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Take Policy & Culture Quiz</label></li>
-    </ul>
-
-    <button onclick="showSection('learning')">Go to Learning Modules</button>
-  </section>
-
-  <!-- 3. Policy & Company Culture Learning Page -->
-  <section id="learning" class="section">
-    <h2>Policy & Company Culture</h2>
-    <p class="section-subtitle">Learn how BrightNest operates and what we stand for.</p>
-
-    <div class="module-card">
-      <h3>Company Rules & Regulations</h3>
-      <ul>
-        <li>Punctuality Policy</li>
-        <li>Proper Work Conduct</li>
-        <li>Use of Office Equipment</li>
-        <li>Data Privacy & Confidentiality</li>
+      <ul class="checklist">
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Fill Out Personal Information Form</label></li>
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Submit Required Documents</label></li>
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Complete Company Orientation Module</label></li>
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Read Employee Handbook</label></li>
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Meet Your Team</label></li>
+        <li><label><input type="checkbox" class="check-item" onclick="updateProgress()"> Take Policy & Culture Quiz</label></li>
       </ul>
-      <p class="note">Presented as short slides with real workplace examples.</p>
-    </div>
 
-    <div class="module-card">
-      <h3>HR Policies</h3>
-      <p>Covers:</p>
-      <ul>
-        <li>Attendance & Tardiness</li>
-        <li>Leave Application Process</li>
-        <li>Overtime Rules</li>
-        <li>Employee Benefits</li>
-        <li>Code of Discipline</li>
-      </ul>
-    </div>
+      <button onclick="showSection('learning')">Go to Learning Modules</button>
+    </section>
 
-    <div class="module-card">
-      <h3>Mission, Vision & Values</h3>
-      <p><strong>Mission:</strong> “To empower businesses through efficient digital solutions and high-performing teams.”</p>
-      <p><strong>Vision:</strong> “To become the Philippines’ leading provider of modern office support systems.”</p>
-      <p><strong>Core Values:</strong></p>
-      <ul class="values-list">
-        <li>Integrity</li>
-        <li>Teamwork</li>
-        <li>Innovation</li>
-        <li>Accountability</li>
-        <li>Respect</li>
-      </ul>
-      <p class="note">Displayed in a simple infographic-style layout.</p>
-    </div>
+    <!-- 3. Learning Modules -->
+    <section id="learning" class="section">
+      <h2>Policy & Company Culture</h2>
+      <p class="section-subtitle">Learn how BrightNest operates and what we stand for.</p>
 
-    <button onclick="showSection('quiz')">Take Mini Quiz</button>
-  </section>
+      <article class="module-card">
+        <h3>Company Rules & Regulations</h3>
+        <ul>
+          <li>Punctuality Policy</li>
+          <li>Proper Work Conduct</li>
+          <li>Use of Office Equipment</li>
+          <li>Data Privacy & Confidentiality</li>
+        </ul>
+        <p class="note">Presented as short slides with real workplace examples.</p>
+      </article>
 
-  <!-- 4. Policy Quiz Page -->
-  <section id="quiz" class="section">
-    <h2>Policy Quiz</h2>
-    <p class="section-subtitle">Test your understanding of BrightNest policies.</p>
+      <article class="module-card">
+        <h3>HR Policies</h3>
+        <ul>
+          <li>Attendance & Tardiness</li>
+          <li>Leave Application Process</li>
+          <li>Overtime Rules</li>
+          <li>Employee Benefits</li>
+          <li>Code of Discipline</li>
+        </ul>
+      </article>
 
-    <form id="quiz-form" class="quiz">
-      <div class="quiz-item">
-        <p>1. Ano ang consequence ng repeated tardiness?</p>
-        <label><input type="radio" name="q1" value="A"> Extra break time</label><br>
-        <label><input type="radio" name="q1" value="B"> Written warning</label><br>
-        <label><input type="radio" name="q1" value="C"> Promotion</label><br>
-        <label><input type="radio" name="q1" value="D"> No consequence</label>
-      </div>
+      <article class="module-card">
+        <h3>Mission, Vision & Values</h3>
+        <p><strong>Mission:</strong> Empower businesses through efficient digital solutions and high-performing teams.</p>
+        <p><strong>Vision:</strong> Become the Philippines’ leading provider of modern office support systems.</p>
+        <ul class="values-list">
+          <li>Integrity</li>
+          <li>Teamwork</li>
+          <li>Innovation</li>
+          <li>Accountability</li>
+          <li>Respect</li>
+        </ul>
+        <p class="note">Displayed in a simple infographic-style layout.</p>
+      </article>
 
-      <div class="quiz-item">
-        <p>2. Ilang araw bago mag-file ng leave?</p>
-        <label><input type="radio" name="q2" value="A"> Same day</label><br>
-        <label><input type="radio" name="q2" value="B"> 1–2 days</label><br>
-        <label><input type="radio" name="q2" value="C"> At least 3 days before</label><br>
-        <label><input type="radio" name="q2" value="D"> Anytime</label>
-      </div>
+      <button onclick="showSection('quiz')">Take Mini Quiz</button>
+    </section>
 
-      <div class="quiz-item">
-        <p>3. Ano ang dapat gawin kung may emergency absence?</p>
-        <label><input type="radio" name="q3" value="A"> Don’t inform anyone</label><br>
-        <label><input type="radio" name="q3" value="B"> Inform HR or team leader ASAP</label><br>
-        <label><input type="radio" name="q3" value="C"> Ignore the absence</label><br>
-        <label><input type="radio" name="q3" value="D"> Wait until next day</label>
-      </div>
+    <!-- 4. Policy Quiz -->
+    <section id="quiz" class="section">
+      <h2>Policy Quiz</h2>
+      <p class="section-subtitle">Test your understanding of BrightNest policies.</p>
 
-      <div class="quiz-item">
-        <p>4. Sino ang dapat lapitan for HR concerns?</p>
-        <label><input type="radio" name="q4" value="A"> Random co-worker</label><br>
-        <label><input type="radio" name="q4" value="B"> Team Leader</label><br>
-        <label><input type="radio" name="q4" value="C"> HR Manager</label><br>
-        <label><input type="radio" name="q4" value="D"> Janitor</label>
-      </div>
-
-      <div class="quiz-item">
-        <p>5. Ano ang core value ng BrightNest?</p>
-        <label><input type="radio" name="q5" value="A"> Laziness</label><br>
-        <label><input type="radio" name="q5" value="B"> Innovation</label><br>
-        <label><input type="radio" name="q5" value="C"> Conflict</label><br>
-        <label><input type="radio" name="q5" value="D"> None</label>
-      </div>
-
-      <button type="button" onclick="checkQuiz()">Finish Quiz</button>
-    </form>
-
-    <p id="quiz-result" class="quiz-result"></p>
-
-    <button class="secondary-btn" onclick="showSection('learning')">Back to Modules</button>
-    <button onclick="showSection('org')">Go to Org Chart</button>
-  </section>
-
-  <!-- 5. Interactive Org Chart Page -->
-  <section id="org" class="section">
-    <h2>Meet Your Team</h2>
-    <p class="section-subtitle">Get to know who you’ll be working with.</p>
-
-    <div class="org-chart">
-      <div class="org-level">
-        <div class="org-member">CEO<br><strong>Maria Estrella</strong></div>
-      </div>
-      <div class="org-level">
-        <div class="org-member">HR Manager<br><strong>Jan Lopez</strong></div>
-      </div>
-      <div class="org-level">
-        <div class="org-member">Operations Head<br><strong>Kim Santos</strong></div>
-        <div class="org-member">Finance Head<br><strong>Leo Mendoza</strong></div>
-        <div class="org-member">IT Head<br><strong>Ron Carpio</strong></div>
-        <div class="org-member">Marketing Head<br><strong>Bea Delos Reyes</strong></div>
-      </div>
-    </div>
-
-    <h3>Staff Profiles</h3>
-    <div class="staff-grid">
-      <div class="staff-card" data-name="Carla Reyes" data-role="Operations Associate" data-contact="carla.reyes@brightnest.com" data-bio="Loves process improvement and coffee.">
-        <div class="staff-avatar-placeholder">CR</div>
-        <h4>Carla Reyes</h4>
-        <p>Operations Associate</p>
-      </div>
-      <div class="staff-card" data-name="Jason Cruz" data-role="IT Specialist" data-contact="jason.cruz@brightnest.com" data-bio="Tech enthusiast and gamer after work.">
-        <div class="staff-avatar-placeholder">JC</div>
-        <h4>Jason Cruz</h4>
-        <p>IT Specialist</p>
-      </div>
-      <div class="staff-card" data-name="Mia Santos" data-role="HR Assistant" data-contact="mia.santos@brightnest.com" data-bio="Passionate about people and culture.">
-        <div class="staff-avatar-placeholder">MS</div>
-        <h4>Mia Santos</h4>
-        <p>HR Assistant</p>
-      </div>
-    </div>
-
-    <div class="staff-detail" id="staff-detail">
-      <h3>Profile Details</h3>
-      <p>Select a staff profile to view details.</p>
-    </div>
-
-    <div class="group-photo">
-      <p>[Group Photo Placeholder]</p>
-      <p>“Welcome to the team, Carla! We’re excited to grow with you.”</p>
-    </div>
-
-    <button onclick="showSection('gamification')">View Gamified Progress</button>
-  </section>
-
-  <!-- 6. Gamified Progress Page -->
-  <section id="gamification" class="section">
-    <h2>Your Badges & Progress</h2>
-    <p class="section-subtitle">See how far you’ve come in your onboarding journey.</p>
-
-    <div class="badge-container">
-      <span class="badge">✔ Orientation Completed</span>
-      <span class="badge" id="quiz-badge">✔ Quiz Master</span>
-      <span class="badge">✔ Document Complete</span>
-    </div>
-
-    <div class="level-info">
-      <p>Level: <span id="level-label">Intermediate</span></p>
-    </div>
-
-    <div class="progress-circle-wrapper">
-      <div class="progress-circle" id="progress-circle">
-        <div class="progress-inner">
-          <span id="progress-circle-label">60%</span>
+      <form id="quiz-form" class="quiz">
+        <div class="quiz-item">
+          <p>1. Ano ang consequence ng repeated tardiness?</p>
+          <label><input type="radio" name="q1" value="A"> Extra break time</label>
+          <label><input type="radio" name="q1" value="B"> Written warning</label>
+          <label><input type="radio" name="q1" value="C"> Promotion</label>
+          <label><input type="radio" name="q1" value="D"> No consequence</label>
         </div>
-      </div>
-      <p>Overall Onboarding Completion</p>
-    </div>
 
-    <button onclick="showSection('messages')">View Welcome Messages</button>
-  </section>
+        <div class="quiz-item">
+          <p>2. Ilang araw bago mag-file ng leave?</p>
+          <label><input type="radio" name="q2" value="A"> Same day</label>
+          <label><input type="radio" name="q2" value="B"> 1–2 days</label>
+          <label><input type="radio" name="q2" value="C"> At least 3 days before</label>
+          <label><input type="radio" name="q2" value="D"> Anytime</label>
+        </div>
 
-  <!-- 7. Welcome Messages Page -->
-  <section id="messages" class="section">
-    <h2>Messages from Your Team</h2>
-    <p class="section-subtitle">A few words from your leaders.</p>
+        <div class="quiz-item">
+          <p>3. Ano ang dapat gawin kung may emergency absence?</p>
+          <label><input type="radio" name="q3" value="A"> Don’t inform anyone</label>
+          <label><input type="radio" name="q3" value="B"> Inform HR or team leader ASAP</label>
+          <label><input type="radio" name="q3" value="C"> Ignore the absence</label>
+          <label><input type="radio" name="q3" value="D"> Wait until next day</label>
+        </div>
 
-    <div class="team-message">
-      <strong>HR Manager (Jan):</strong> “Welcome to BrightNest, Carla! We’re excited to support your growth.”
-    </div>
-    <div class="team-message">
-      <strong>Operations Head (Kim):</strong> “You’re now part of our team. Let’s achieve great things together!”
-    </div>
+        <div class="quiz-item">
+          <p>4. Sino ang dapat lapitan for HR concerns?</p>
+          <label><input type="radio" name="q4" value="A"> Random co-worker</label>
+          <label><input type="radio" name="q4" value="B"> Team Leader</label>
+          <label><input type="radio" name="q4" value="C"> HR Manager</label>
+          <label><input type="radio" name="q4" value="D"> Janitor</label>
+        </div>
 
-    <button class="secondary-btn" onclick="showSection('org')">View Your Team</button>
-    <button onclick="showSection('handbook')">Read Employee Handbook</button>
-  </section>
+        <div class="quiz-item">
+          <p>5. Ano ang core value ng BrightNest?</p>
+          <label><input type="radio" name="q5" value="A"> Laziness</label>
+          <label><input type="radio" name="q5" value="B"> Innovation</label>
+          <label><input type="radio" name="q5" value="C"> Conflict</label>
+          <label><input type="radio" name="q5" value="D"> None</label>
+        </div>
 
-  <!-- 8. Employee Handbook Page -->
-  <section id="handbook" class="section">
-    <h2>Employee Handbook Summary</h2>
-    <p class="section-subtitle">Key rules and policies at BrightNest Solutions Inc.</p>
+        <button type="button" onclick="checkQuiz()">Finish Quiz</button>
+      </form>
 
-    <div class="module-card">
-      <h3>1. No Late Submission of Reports</h3>
-      <p><strong>Consequence:</strong></p>
-      <ul>
-        <li>1st: Verbal reminder</li>
-        <li>2nd: Written warning</li>
-        <li>3rd: HR disciplinary action</li>
-      </ul>
-    </div>
+      <p id="quiz-result" class="quiz-result"></p>
 
-    <div class="module-card">
-      <h3>2. No Inappropriate Workplace Behavior</h3>
-      <p><strong>Examples:</strong> Harassment, bullying, disrespect, offensive jokes</p>
-      <p><strong>Consequence:</strong> Immediate HR investigation + disciplinary action</p>
-    </div>
+      <button class="secondary-btn" onclick="showSection('learning')">Back to Modules</button>
+      <button onclick="showSection('org')">Go to Org Chart</button>
+    </section>
 
-    <div class="module-card">
-      <h3>3. No Absences Without Notice</h3>
-      <p><strong>Consequence:</strong></p>
-      <ul>
-        <li>Salary deduction</li>
-        <li>HR memo</li>
-      </ul>
-    </div>
-
-    <div class="module-card">
-      <h3>4. Maintain Proper Dress Code</h3>
-      <ul>
-        <li>Smart casual (Mon–Thu)</li>
-        <li>Company shirt / casual (Fri)</li>
-      </ul>
-      <p><strong>Consequence:</strong> Warning or sent home if inappropriate</p>
-    </div>
-
-    <div class="module-card">
-      <h3>Workplace Conduct</h3>
-      <ul>
-        <li>Respect and professionalism at all times</li>
-        <li>Keep client data confidential</li>
-        <li>Observe clean desk and clean workspace policy</li>
-        <li>Use office equipment responsibly (printer, computer, internet)</li>
-      </ul>
-    </div>
-
-    <div class="module-card">
-      <h3>Attendance Policy</h3>
-      <ul>
-        <li>8 AM – 5 PM (fixed schedule)</li>
-        <li>15-minute grace period (max 3x a month)</li>
-        <li>More than 3 tardies = written warning</li>
-      </ul>
-    </div>
-
-    <div class="module-card">
-      <h3>Leave Policy</h3>
-      <ul>
-        <li>Vacation Leave: Filed 3 days before</li>
-        <li>Sick Leave: Inform HR before shift starts</li>
-      </ul>
-    </div>
-
-    <button onclick="showSection('final')">I Understand</button>
-  </section>
-
-  <!-- 9. Final Screen -->
-  <section id="final" class="section">
-    <h2>🎉 Onboarding Complete! 🎉</h2>
-    <p>Congratulations, Carla! You have completed your BrightNest onboarding journey.</p>
-
-    <div class="badge-container">
-      <span class="badge">Orientation Completed</span>
-      <span class="badge">Quiz Master</span>
-      <span class="badge">Document Complete</span>
-    </div>
-
-    <div class="certificate">
-      <h3>Digital Certificate</h3>
-      <p><strong>Carla</strong><br>BrightNest Solutions – Onboarding Completion</p>
-      <button onclick="downloadCertificate()">Download Certificate</button>
-    </div>
-
-    <button class="secondary-btn" onclick="showSection('welcome-screen')">Back to Start</button>
-  </section>
+    <!-- Continue with org chart, gamification, messages, handbook, final screens -->
+    <!-- Same structure, use <article> for module-like sections and <div> for grouping -->
+    
+  </main>
 
   <script src="script.js"></script>
 </body>
